@@ -1,14 +1,23 @@
+
+//Se importan Hooks Necesarios
 import React, { Component, createRef} from "react";
+//Se importa React Player
 import ReactPlayer from "react-player";
+// Se importa imagen y video
 import Video from "../assets/vid/videoEstadio_musica.mp4";
 import Portada from "../assets/img/portada.jpg";
+import PortadaRepeat from "../assets/img/imgRepeat.png";
 
 
 class Reproductor extends Component {
   
+  //Se crea constructor con parámetros necesarios para poder manipular las funciones de React Player
   constructor(props) {
     super(props);
     this.BotonStop = createRef();
+    this.PortadaRepeat = createRef();
+    this.PlayerWrapper = createRef();
+
     this.state = {
       playing: true,
       played: 0,
@@ -17,41 +26,42 @@ class Reproductor extends Component {
     };
   }
   
-  
-  playPause = () => {
-    this.setState({ playing: !this.state.playing });
-  };
+  //Función para poner Stop
   stop = (e) => {
     this.setState({ playing: false });
     this.player.seekTo(parseFloat((e.target.value = 0)));
+    this.PortadaRepeat.current.style.display='block';
+    this.PlayerWrapper.current.style.display='none';
+    this.BotonStop.current.style.visibility='hidden';
   
+  //Función para definir que sucede mientras el video se está reproduciendo
   };
   onPlay = () => {
     this.setState({ playing: true });
-    this.BotonStop.current.style.visibility='visible';
+    this.BotonStop.current.style.visibility='visible';  
+    this.PortadaRepeat.current.style.display='none';
+    this.PlayerWrapper.current.style.display='block';
   };
+
+  //Función para definir que sucede si el video está en pausa
   onPause = () => {
     this.setState({ playing: false });
   };
 
-  onProgress = (state) => {
-    // We only want to update time slider if we are not currently seeking
-    if (!this.state.seeking) {
-      this.setState(state);
-    }
-  };
-  
   ref = (player) => {
     this.player = player;
   };
   
-
+//Se carga el reproductor de React Player
   render() {
     const { playing } = this.state;
     
     return (
       <section className="reproductor">
-        <div className="player-wrapper">
+        <div className="reproductor--portadaRepeat" ref={this.PortadaRepeat} onClick={this.onPlay}>
+          <img src={PortadaRepeat} alt="Imagen de portada para repetir el video" />
+        </div>
+        <div className="player-wrapper" ref={this.PlayerWrapper}>
           <ReactPlayer
             ref={this.ref}
             className="react-player"
