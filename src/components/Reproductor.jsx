@@ -1,9 +1,11 @@
 
 //Se importan Hooks Necesarios
 import React, { Component, createRef} from "react";
+
 //Se importa React Player
 import ReactPlayer from "react-player";
-// Se importa imagen y video
+
+// Se importan recursos
 import Video from "../assets/vid/videoEstadio_musica.mp4";
 import Portada from "../assets/img/portada.jpg";
 import PortadaRepeat from "../assets/img/imgRepeat.png";
@@ -20,9 +22,6 @@ class Reproductor extends Component {
 
     this.state = {
       playing: true,
-      played: 0,
-      loaded: 0,
-      duration: 0,
     };
   }
   
@@ -48,6 +47,14 @@ class Reproductor extends Component {
     this.setState({ playing: false });
   };
 
+  //Función para definir que sucede una vez que el video finaliza
+  endVideo = () =>{
+    this.setState({ playing: false });
+    this.PlayerWrapper.current.style.display='none';
+    this.PortadaRepeat.current.style.display='block';
+    this.BotonStop.current.style.visibility='hidden';
+  }
+
   ref = (player) => {
     this.player = player;
   };
@@ -72,7 +79,7 @@ class Reproductor extends Component {
             playing={playing}
             onPlay={this.onPlay}
             onPause={this.onPause}
-            onEnded={() => this.setState({ playing: false })}
+            onEnded={this.endVideo}
             onProgress={this.onProgress}
             controls
             light = {Portada}
