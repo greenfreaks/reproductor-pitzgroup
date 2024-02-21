@@ -1,7 +1,7 @@
 import React, { Component, createRef} from "react";
 import ReactPlayer from "react-player";
 import Video from "../assets/vid/videoEstadio_musica.mp4";
-import Portada from "../assets/img/portada.png";
+import Portada from "../assets/img/portada.jpg";
 
 
 class Reproductor extends Component {
