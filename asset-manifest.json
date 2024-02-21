@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/reproductor-pitzgroup/static/css/main.d1c3e12b.css",
-    "main.js": "/reproductor-pitzgroup/static/js/main.90b67108.js",
+    "main.js": "/reproductor-pitzgroup/static/js/main.4b16544c.js",
     "reactPlayerYouTube.js": "/reproductor-pitzgroup/static/js/reactPlayerYouTube.03d1147d.chunk.js",
     "reactPlayerSoundCloud.js": "/reproductor-pitzgroup/static/js/reactPlayerSoundCloud.d8ac48c3.chunk.js",
     "reactPlayerVimeo.js": "/reproductor-pitzgroup/static/js/reactPlayerVimeo.5d4cf07d.chunk.js",
@@ -16,13 +16,10 @@
     "reactPlayerFilePlayer.js": "/reproductor-pitzgroup/static/js/reactPlayerFilePlayer.2a47735a.chunk.js",
     "reactPlayerPreview.js": "/reproductor-pitzgroup/static/js/reactPlayerPreview.1d19b7db.chunk.js",
     "static/media/videoEstadio_musica.mp4": "/reproductor-pitzgroup/static/media/videoEstadio_musica.e0a184ed5a294c486045.mp4",
-    "static/media/portada.png": "/reproductor-pitzgroup/static/media/portada.ef3656e65e5ea6217afb.png",
-    "static/media/in.png": "/reproductor-pitzgroup/static/media/in.3c5c461f83cc7069a13f.png",
-    "static/media/tw.png": "/reproductor-pitzgroup/static/media/tw.802534bf2678c3afb41d.png",
-    "static/media/fb.png": "/reproductor-pitzgroup/static/media/fb.795fce8e464693d7346d.png",
+    "static/media/portada.jpg": "/reproductor-pitzgroup/static/media/portada.a55ae60bbaa29aac3da0.jpg",
     "index.html": "/reproductor-pitzgroup/index.html",
     "main.d1c3e12b.css.map": "/reproductor-pitzgroup/static/css/main.d1c3e12b.css.map",
-    "main.90b67108.js.map": "/reproductor-pitzgroup/static/js/main.90b67108.js.map",
+    "main.4b16544c.js.map": "/reproductor-pitzgroup/static/js/main.4b16544c.js.map",
     "reactPlayerYouTube.03d1147d.chunk.js.map": "/reproductor-pitzgroup/static/js/reactPlayerYouTube.03d1147d.chunk.js.map",
     "reactPlayerSoundCloud.d8ac48c3.chunk.js.map": "/reproductor-pitzgroup/static/js/reactPlayerSoundCloud.d8ac48c3.chunk.js.map",
     "reactPlayerVimeo.5d4cf07d.chunk.js.map": "/reproductor-pitzgroup/static/js/reactPlayerVimeo.5d4cf07d.chunk.js.map",
@@ -39,6 +36,6 @@
   },
   "entrypoints": [
     "static/css/main.d1c3e12b.css",
-    "static/js/main.90b67108.js"
+    "static/js/main.4b16544c.js"
   ]
 }
