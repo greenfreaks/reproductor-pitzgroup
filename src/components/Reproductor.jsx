@@ -60,6 +60,7 @@ class Reproductor extends Component {
       <section className="reproductor">
         <div className="reproductor--portadaRepeat" ref={this.PortadaRepeat} onClick={this.onPlay}>
           <img src={PortadaRepeat} alt="Imagen de portada para repetir el video" />
+          <div className="reproductor--portadaRepeat-block"></div>
         </div>
         <div className="player-wrapper" ref={this.PlayerWrapper}>
           <ReactPlayer
