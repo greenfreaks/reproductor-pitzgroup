@@ -47,13 +47,10 @@ class Reproductor extends Component {
   
 
   render() {
-    const { playing, played } = this.state;
+    const { playing } = this.state;
     
     return (
       <section className="reproductor">
-        <div onClick={this.playPause} className="reproductor--portada">
-          <img  src={Portada} alt="" />
-        </div>
         <div className="player-wrapper">
           <ReactPlayer
             ref={this.ref}
