@@ -3,10 +3,6 @@ import Header from './components/Header';
 import Reproductor from './components/Reproductor';
 import Footer from './components/Footer';
 
-
-
-
-
 function App() {
   return (
       <section className='app'>
