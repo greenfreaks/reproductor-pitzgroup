@@ -5,9 +5,9 @@ const Footer = () => {
   return (
     <section className="footer">
       <div className="footer--social">
-        <a href="https://www.facebook.com/thePITZapp/" target="_blank" className="footer--social-fb"><img src={Fb} alt="Logo Facebook" /></a>
-        <a href="https://twitter.com/thepitzapp?lang=es" target="_blank" className="footer--social-tw"><img src={Tw} alt="Logo Twitter" /></a>
-        <a href="https://www.instagram.com/thepitzapp/" target="_blank" className="footer--social-in"><img src={In} alt="Logo Instagram" /></a>
+        <a href="https://www.facebook.com/thePITZapp/" target="_blank" className="footer--social-fb"><img loading='lazy' src={Fb} alt="Logo Facebook" /></a>
+        <a href="https://twitter.com/thepitzapp?lang=es" target="_blank" className="footer--social-tw"><img loading='lazy' src={Tw} alt="Logo Twitter" /></a>
+        <a href="https://www.instagram.com/thepitzapp/" target="_blank" className="footer--social-in"><img loading='lazy' src={In} alt="Logo Instagram" /></a>
       </div>
 
       <div className="footer--texto">
