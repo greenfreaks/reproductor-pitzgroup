@@ -1,7 +1,10 @@
+/* ----------------------- */
 /* -------Variables------- */
+/* ------------------------*/
 :root{
     --mainBlue: #0A1F3B;
-    --darkBlue: #2B323F;
+    --black: #000;
+    --white: #fff;
     --marginPage: 0 100px 0 100px;
 }
 
@@ -22,27 +25,36 @@
     }
 }
 
-/* -------Reseteo------- */
+/* ---------------------- */
+/* -------Reseteo-------- */
+/* --------------------- -*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ------------------------------ */
 /* -------Estilos del body------- */
+/* ------------------------------ */
 body{
     overflow-x: hidden;
 }
 
-.space{
-    margin: 32px 0 32px 0;
+.main{
+    margin: var(--marginPage);
 }
 
+.space{
+    margin: 24px 0 24px 0;
+}
+/* -------------------- */
 /* -------Header------- */
+/* ---------------------*/
 
 .header{
     width: 100%;
-    height: 100px;
+    height: 80px;
     background-color: var(--mainBlue);
 }
 .header .header--img{
@@ -54,65 +66,68 @@ body{
 
 .header--img img{
     margin-top: 25px;
-    width: 150px;
-}
-
-@media screen and (max-width: 764px){
-.header{
-    height: 80px;
-}
-.header--img img{
     width: 100px;
 }
 
+/* ------------------------- */
+/* -------Reproductor------- */
+/* ------------------------- */
+.reproductor--portada{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* -------Reproductor------- */
 .reproductor--portada img{
     width: 100%;
-    max-width: 700px;
-    height: 100%;
-    margin: var(--marginPage);
     cursor: pointer;
+    display: none;
 }
-.player-wrapper{
+/* .player-wrapper{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: var(--marginPage);
-}
-
-/* .react-player{
+} */
+.player-wrapper {
+    position: relative;
+    padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+  }
+  
+  .react-player {
+    position: absolute;
     top: 0;
     left: 0;
-} */
+  }
 
-.reproductor--botones{
+.reproductor--botonStop{
     width: 100%;
-    background-color: #000;
-    margin: 0 100px 0 100px;
-    padding: 16px;
+    height: 24px;
+    background-color: var(--black);
     display: flex;
-    align-items:center;
-    height: 50px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    cursor: pointer;
+    visibility: hidden;
 }
-.reproductor--botones button{
- margin-right: 10px;
- background-color: transparent;
- color: white;
- border: none;
+.reproductor--botonStop-icon{
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    background-color: var(--white);
 }
 
-
+/* -------------------- */
 /* -------Footer------- */
+/* -------------------- */
 .footer{
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 100px;
+    padding: 50px;
 }
 .footer--social{
     display: flex;
@@ -122,7 +137,7 @@ body{
 }
 
 .footer--social a img{
-    width: 40px;
+    width: 24px;
     margin-right: 20px;
 }
 

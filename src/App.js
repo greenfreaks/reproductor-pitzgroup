@@ -13,7 +13,10 @@ function App() {
         <Header/>
         <div className='space'></div>
 
-        <Reproductor/>
+        <div className='main'>
+          <Reproductor/>
+        </div>
+
         <div className='space'></div>
         
         <Footer/>
